@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 interface SideMenuOption {
   label: string;
@@ -10,7 +10,7 @@ interface SideMenuOption {
 
 @Component({
   selector: 'side-menu-options',
-  imports: [RouterLink],
+  imports: [RouterLink, RouterLinkActive],
   templateUrl: './side-menu-options.html',
 })
 export class SideMenuOptions {
@@ -19,13 +19,13 @@ export class SideMenuOptions {
       label: 'Trending',
       subLabel: 'Tendencias',
       icon: "fa-solid fa-arrow-trend-up",
-      route: '/trending'
+      route: '/dashboard/trending'
     },
     {
       label: 'Search',
       subLabel: 'Buscador',
       icon: 'fa-solid fa-magnifying-glass',
-      route: '/search'
+      route: '/dashboard/search'
     }
   ]
 }
